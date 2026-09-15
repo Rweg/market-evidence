@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Public market role-value evidence with source-linked compensation observations." />
+    <title>Market Evidence | Source-led comparator workspace</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Evidence navigation">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">ME</div>
+          <div>
+            <p class="eyebrow">Personal research workspace</p>
+            <h1>Market Evidence</h1>
+          </div>
+        </div>
+        <p class="sidebar-summary">A short manager view first, with the complete public comparator ledger and source audit kept behind it.</p>
+        <nav class="nav-list">
+          <button class="nav-item active" data-view="manager" type="button"><span class="nav-icon">◎</span>Manager view</button>
+          <button class="nav-item" data-view="money" type="button"><span class="nav-icon">$</span>Research evidence</button>
+          <button class="nav-item" data-view="audit" type="button"><span class="nav-icon">✓</span>Source audit</button>
+          <button class="nav-item" data-view="coverage" type="button"><span class="nav-icon">▦</span>Employer coverage</button>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="sidebar-stat"><strong id="sidebar-money-count">50</strong><span>money rows</span></div>
+          <div class="sidebar-stat"><strong id="sidebar-coverage-count">176</strong><span>screened records</span></div>
+          <div class="privacy-note"><span class="status-dot"></span>Public comparator set only</div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="breadcrumb">Evidence workspace <span>/</span> <strong id="view-breadcrumb">Manager view</strong></p>
+            <p class="updated-line">RWF-normalized · refreshed 20 August 2026 · source links retained</p>
+          </div>
+          <div class="top-actions">
+            <button class="button button-secondary" id="copy-prompt" type="button"><span aria-hidden="true">▣</span> Copy GPT prompt</button>
+            <button class="button button-primary" id="download-current" type="button"><span aria-hidden="true">↓</span> Download view</button>
+          </div>
+        </header>
+
+        <section class="page-intro">
+          <div>
+            <p class="eyebrow blue">Public market evidence brief</p>
+            <h2 id="page-title">Role families and source-backed comparisons</h2>
+            <p class="page-description" id="page-description">A concise view of five benchmark families, with original currencies, RWF reference displays, evidence grades, and direct source links.</p>
+          </div>
+          <div class="source-rule"><span class="rule-icon">✓</span><span><strong>Evidence rule</strong><br />No amount appears without a direct source URL.</span></div>
+        </section>
+
+        <section class="metrics-grid" aria-label="Evidence summary">
+          <div class="metric-card"><span class="metric-label">Compensation rows</span><strong id="metric-money">50</strong><span class="metric-note">public, source-linked observations</span></div>
+          <div class="metric-card accent-green"><span class="metric-label">Official documents</span><strong id="metric-official">12</strong><span class="metric-note">employer ATS or public-sector records</span></div>
+          <div class="metric-card accent-orange"><span class="metric-label">Hourly / task rates</span><strong id="metric-hourly">8</strong><span class="metric-note">kept hourly, not monthlyized</span></div>
+          <div class="metric-card accent-blue"><span class="metric-label">Employer records</span><strong id="metric-employers">176</strong><span class="metric-note">screened public comparator records</span></div>
+        </section>
+
+        <section class="assistant-strip" aria-labelledby="assistant-title">
+          <div class="assistant-copy">
+            <div class="assistant-icon" aria-hidden="true">G</div>
+            <div><p class="eyebrow blue">Evidence assistant</p><h3 id="assistant-title">Ask from the linked records</h3></div>
+          </div>
+          <form id="assistant-form" class="assistant-form">
+            <label class="sr-only" for="assistant-input">Ask a question about the evidence</label>
+            <input id="assistant-input" type="search" placeholder="e.g. Show Kenya manager evidence" autocomplete="off" />
+            <button class="button button-primary" type="submit">Ask</button>
+          </form>
+          <div id="assistant-answer" class="assistant-answer" aria-live="polite">The assistant only summarizes rows that have a source link in this workspace.</div>
+        </section>
+
+        <section class="manager-view" id="manager-view" aria-labelledby="manager-title">
+          <div class="manager-hero">
+            <div>
+              <p class="eyebrow blue">One-screen management brief</p>
+              <h3 id="manager-title">The role spans five market families</h3>
+              <p>These public comparators are arranged by the work they benchmark. Nairobi figures stay visibly Nairobi figures; RWF is shown only as a cross-currency display. No median is invented and no source is treated as payroll unless the source says so.</p>
+            </div>
+            <div class="manager-rule"><strong>Read this first</strong><span>Scope, evidence grade, original currency, and direct source are shown together.</span></div>
+          </div>
+
+          <div class="manager-conclusion">
+            <p class="eyebrow">Role-value conclusion</p>
+            <h4>Combined scope should not be assessed against an annotation-specialist IC benchmark alone.</h4>
+            <p>The comparison set covers annotation and perception quality, people and throughput management, technical data workflows, cross-functional delivery, and engineering responsibility.</p>
+          </div>
+
+          <div class="benchmark-heading"><div><p class="eyebrow blue">One-page comparison table</p><h4>Published range bands by work family</h4></div><span class="result-count">Direct links below</span></div>
+          <div class="benchmark-wrap"><table class="benchmark-table" id="benchmark-table"><thead><tr><th>Benchmark family</th><th>What the comparator covers</th><th>Modest published</th><th>Middle published</th><th>High published</th><th>Evidence</th><th>Source</th></tr></thead><tbody></tbody></table></div>
+          <div class="range-key"><strong>How to read the bands</strong><span><b>Modest</b> is the source's low observation, <b>middle</b> is its midpoint where published, and <b>high</b> is its high observation. Each cell keeps the source currency and adds an RWF reference display; no blended median is created.</span></div>
+
+          <div class="evidence-legend">
+            <div><p class="eyebrow blue">Evidence grades</p><strong>A</strong><span>Employer-published compensation or official public-sector document.</span></div>
+            <div><strong>B</strong><span>Large employee-reported sample, retained as a comparator rather than payroll.</span></div>
+            <div><strong>C</strong><span>Small employee-reported or aggregated sample; directional only.</span></div>
+            <div><strong>D</strong><span>Job-board expectation, historical listing, platform rate, or secondary source.</span></div>
+          </div>
+
+          <div class="manager-grid">
+            <section class="manager-panel"><p class="eyebrow blue">Role-scope evidence</p><h4>International sources confirm the discipline is technical</h4><p>Official global postings connect human-data operations with annotation quality, tooling, metrics, workforce planning, data pipelines, and engineering delivery. Their compensation is not used as a Rwanda benchmark.</p><div class="scope-links"><a href="https://jobs.ashbyhq.com/cartesia/c6fb67f7-076c-4141-82c8-f50214303ec0" target="_blank" rel="noreferrer"><strong>Cartesia</strong><span>AI Data Operations Manager · official role scope ↗</span></a><a href="https://jobs.ashbyhq.com/marsorobotics/82a24efa-3b3e-42e0-9464-ee6a230399d1" target="_blank" rel="noreferrer"><strong>Marso Robotics</strong><span>AI data / annotation operations · official role scope ↗</span></a></div></section>
+            <section class="manager-panel"><p class="eyebrow blue">Evidence discipline</p><h4>What the table keeps separate</h4><ul class="discipline-list"><li><strong>Base salary vs total compensation</strong><span>Levels.fyi is shown as total compensation, not base.</span></li><li><strong>Monthly vs annual vs hourly</strong><span>Units remain in the source form; no task rate is monthlyized.</span></li><li><strong>Local vs regional</strong><span>Kenya is a regional comparator, not a Kigali equivalence.</span></li><li><strong>Current vs historical</strong><span>Expired listings stay visible only as dated evidence.</span></li></ul></section>
+          </div>
+
+          <section class="market-lanes"><div><p class="eyebrow blue">Coverage lanes now tracked</p><h4>Employer coverage is broader than the five benchmark rows</h4></div><div class="lane-grid"><div><strong>Telecom / NOC / drive-test</strong><span>RURA, MTN, Airtel, Ericsson, Nokia, KTRN</span></div><div><strong>Government / digital systems</strong><span>RDB, RURA, RSSB, C4IR, RISA</span></div><div><strong>Health / data infrastructure</strong><span>CHAI, PIH, UGHE, digital health programmes</span></div><div><strong>Energy / field engineering</strong><span>REG, EUCL, EDCL, KivuWatt, Bboxx</span></div><div><strong>AI / cloud-work</strong><span>Digital Umuganda, TELUS, Welo, Wing, DataAnnotation</span></div><div><strong>Pan-African / international remote</strong><span>AGL, ALX, Andela, Remote, Careers in Africa</span></div></div></section>
+        </section>
+
+        <section class="controls" aria-label="Evidence filters">
+          <div class="search-wrap"><span class="search-icon" aria-hidden="true">⌕</span><label class="sr-only" for="search-input">Search evidence</label><input id="search-input" type="search" placeholder="Search role, employer, location, or source type" /></div>
+          <label class="select-wrap"><span>Period</span><select id="period-filter"><option value="all">All periods</option><option value="month">Monthly</option><option value="year">Annual</option><option value="hour">Hourly</option></select></label>
+          <label class="select-wrap"><span>Quality</span><select id="quality-filter"><option value="all">All quality levels</option><option value="High">High</option><option value="Medium">Medium</option><option value="Low">Low</option></select></label>
+          <button class="button button-quiet" id="clear-filters" type="button">Clear filters</button>
+        </section>
+
+        <section class="table-section" aria-labelledby="table-title">
+          <div class="table-heading"><div><p class="eyebrow blue">Linked evidence table</p><h3 id="table-title">Compensation observations</h3></div><span class="result-count" id="result-count">49 rows</span></div>
+          <div class="table-wrap"><table id="evidence-table"><thead></thead><tbody></tbody></table></div>
+          <div class="empty-state" id="empty-state" hidden>No records match the current filters.</div>
+        </section>
+
+        <section class="downloads" aria-labelledby="downloads-title">
+          <div><p class="eyebrow blue">Portable records</p><h3 id="downloads-title">Download the public tables</h3><p>These files contain only public comparator evidence. The original source URL is retained in every money row.</p></div>
+          <div class="download-list">
+            <a class="download-item" href="data/Rwego_Market_Evidence_Public_Comparison_Aug_2026_RWF.csv" download><span class="file-icon">CSV</span><span><strong>Market evidence</strong><small>50 source-linked money rows with grades and warnings</small></span><span class="download-arrow">↓</span></a>
+            <a class="download-item" href="data/Rwego_Public_Market_Source_Audit_Aug_2026.csv" download><span class="file-icon">CSV</span><span><strong>Money-source audit</strong><small>Classification, grade, warning, and link per row</small></span><span class="download-arrow">↓</span></a>
+            <a class="download-item" href="data/Rwego_Employer_Coverage_Public_Comparison_Aug_2026_RWF.csv" download><span class="file-icon">CSV</span><span><strong>Employer coverage</strong><small>176 screened public comparator records</small></span><span class="download-arrow">↓</span></a>
+          </div>
+        </section>
+
+        <footer class="site-footer"><span>Public comparator set · RWF visible · internal-company records excluded</span><span>Downloadable public tables are available above; each money row retains its direct source URL.</span></footer>
+      </main>
+    </div>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
