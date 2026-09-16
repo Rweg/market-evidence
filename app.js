@@ -2,9 +2,10 @@ const DATA_FILES = {
   money: 'data/Rwego_Market_Evidence_Public_Comparison_Aug_2026_RWF.csv',
   audit: 'data/Rwego_Public_Market_Source_Audit_Aug_2026.csv',
   coverage: 'data/Rwego_Employer_Coverage_Public_Comparison_Aug_2026_RWF.csv',
+  signals: 'data/employer-signals.csv',
 };
 
-const state = { view: 'manager', money: [], audit: [], coverage: [], filtered: [] };
+const state = { view: 'manager', money: [], audit: [], coverage: [], signals: [], filtered: [] };
 const $ = (selector) => document.querySelector(selector);
 
 const MANAGER_BENCHMARKS = [
@@ -181,6 +182,19 @@ function renderCoverageTable(rows) {
   </tr>`).join('');
 }
 
+function renderSignals(rows) {
+  const target = $('#signals-table');
+  if (!target) return;
+  target.querySelector('tbody').innerHTML = rows.map((row) => `<tr>
+    <td><div class="role-title">${escapeHtml(row.Employer)}</div><div class="role-location">${escapeHtml(row.Sector)}</div></td>
+    <td>${escapeHtml(row.Signal)}</td>
+    <td>${escapeHtml(row['What it supports'])}</td>
+    <td>${escapeHtml(row.Period)}</td>
+    <td><span class="grade-badge ${gradeClass(row['Evidence grade'])}">${escapeHtml(row['Evidence grade'])}</span><div class="status-text">${escapeHtml(row.Warning)}</div></td>
+    <td><a class="open-source" href="${escapeHtml(row['Source URL'])}" target="_blank" rel="noreferrer">Open source ↗</a></td>
+  </tr>`).join('');
+}
+
 function currentRows() { return state[state.view]; }
 
 function filterRows() {
@@ -269,8 +283,9 @@ async function loadData() {
   $('#metric-employers').textContent = state.coverage.length;
   $('#sidebar-money-count').textContent = state.money.length;
   $('#sidebar-coverage-count').textContent = state.coverage.length;
-  state.filtered = managerRows();
+  state.filtered = state.money;
   renderTable();
+  renderSignals(state.signals);
 }
 
 document.querySelectorAll('.nav-item').forEach((button) => button.addEventListener('click', () => updateView(button.dataset.view)));
